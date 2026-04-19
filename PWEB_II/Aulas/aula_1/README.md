@@ -1,32 +1,32 @@
-# Aula 1
+# Aula 1 - Frontend Design
 Anotações da primeira aula
-## Desing Patterns
+## Design Patterns
+#### O que são?
+Design patterns são soluções para problemas comuns no desenvolvimento de software 
 #### Propriedades
 *   Estruturas escalaveis e reutilizaveis
-*   Melhoria de mantenabilidade do codigo  Ro
-*   bustez, eficiencia, etc
+*   Melhoria de mantenabilidade do codigo
+*   Robustez, eficiencia, etc
 #### Exemplos
 *   MVC (Model-View-Controller)
 *   Flux Architecture
 *   Dependency Injection
 *   Component-Based Architecture
 ### MVC
-O padrão MVC separa uma aplicação em três componentes
-interconectados: **Modelo, Visão e Controlador.** O **Modelo** representa os
-dados e a lógica de negócio, a **Visão** lida com a apresentação ao usuário e o
-**Controlador** atua como intermediário entre Modelo e Visão
+Separa uma aplicação em três componentes interconectados: **Modelo, Visão e Controlador.**
+*   **Modelo:** representa os dados e a lógica de negócio
+*   **Visão:** lida com a apresentação ao usuário
+*   **Controlador:** atua como intermediário entre Modelo e Visão
 ### Flux Architecture
-Flux é um padrão de arquitetura de aplicações popularizada pelo Facebook
-(Meta). Enfatiza o fluxo de dados unidirecional força a separação estrita entre
-os componentes: Dispatchers (recebem ações que são disparadas aos
-listeners), Stores (armazenam dados que são modificados por dispatchers) e
-Views (Componentes React que escutam mudanças em Stores e chamam
-ações dos dispatchers).
+Enfatiza o fluxo de dados unidirecional, força a separação estrita entre
+os componentes: 
+*   Dispatchers (recebem ações que são disparadas aos listeners)
+*   Stores (armazenam dados que são modificados por dispatchers)
+*   Views (Componentes React que escutam mudanças em Stores e chamam ações dos dispatchers).
 ### Dependency Injection
-Dependency Injection é um padrão de projeto que busca gerenciar
-dependências de componentes injetando-os a partir de fontes externas ao
+Busca gerenciar dependências de componentes injetando-os a partir de fontes externas ao
 invés de criá-las dentro do próprio componente.
-##### Objetivos
+#### Objetivos
 *   Aumentar a flexibilidade
 *   Reduzir o acomplamento entre as classes
 *   Aumentar a reutilização de código
@@ -34,14 +34,59 @@ invés de criá-las dentro do próprio componente.
 <img width="458" height="247" alt="image" src="https://github.com/user-attachments/assets/417a4250-ef74-4d2e-9f9c-e71aed6b0aaa" />
 
 ### Component Based
-Arquitetura baseada em componentes enfatiza a construção de aplicações
-pela composição de componentes de interface do usuário reutilizáveis.
-Estimula o encapsulamento, modularidade e a reutilização
-##### Vantagens
-*   **Reutilização:** Os componentes podem ser facilmente reutilizados em diferentes partes da aplicação.
+Eenfatiza a construção de aplicações pela composição de componentes de interface do usuário reutilizáveis. Estimula o encapsulamento, modularidade e a reutilização
+#### Vantagens
+*   **Reutilização:** Os componentes podem ser reutilizados em diferentes partes da aplicação.
 *   **Encapsulamento:** Cada componente é responsável pelo seu próprio estado e comportamento, aumentando a modularidade e a facilidade de manutenção do código.
 *   **Eficiência de desenvolvimento:** As equipes podem trabalhar em componentes individuais simultaneamente, promovendo o desenvolvimento paralelo.
 #### Desvantagens
 *   **Complexidade em projetos grandes:** À medida que o número de componentes aumenta, o gerenciamento da comunicação e das dependências pode ser desafiador.
 *   **Problemas de desempenho:** O design inadequado de componentes ou a renderização excessiva podem afetar o desempenho.
 
+## Arquiteturas de desenvolvimento
+*   Static Site Generator (SSG)
+*   Single Page Application (SPA)
+*   Server-Side Rendering (SSR)
+### Single Page Application (SPA)
+*   O conteúdo é carregado por meio de arquivos Javascript para todo o aplicativo e hospedado em uma única página HTML
+*   Os arquivos Javascript abrigam todos os dados relativos à lógica da aplicação, UI e comunicação com o servidor
+*   À medida que o usuário realiza requisições a página vai sendo modificada sem necessidade de novas transferências de dados
+#### Vantagens
+*   Experiência do usuário mais fluida e responsiva
+*   Menor tempo de resposta após o carregamento inicial
+*   Gerenciamento de estado mais complexo em grandes aplicações
+#### Desvantagens
+*   Tempo de carregamento cresce com a complexidade da aplicação
+*   Dificulta Search Engine Optimization (SEO)
+
+#### Quando usar?
+*   Dashboards e aplicações mais interativas
+*   Evitar utilizar para aplicações que dependem de SEO, ou seja que possuem conteúdo intensivo
+### Server-Side Rendering (SSR)
+*   Os clientes recebem uma página já renderizada no servidor
+*   A renderização ocorre no servidor antes de chegar ao navegador, após consultas a bancos de dados, APIs, etc
+*   Alguns elementos podem ser armazenados em cache
+#### Vantagens
+*   As alterações de conteúdo são exibidas instantaneamente
+*   O SSR permite que as equipes criem experiências de conteúdo dinâmicas e personalizadas sem soluções alternativas trabalhosas.
+*   Facilita a classificação por motores de busca (SEO)
+#### Desvantagens
+*   Normalmente, SSR exige mais chamadas de API para o servidor
+*   Por padrão, SSR costuma ser mais lento do que os SPAs e SSGs
+#### Quando aplicar?
+Ideais para experiências personalizadas em que as alterações dos dados
+podem ser vistas em tempo real. Aplicações SSR são opções excelentes para
+conteúdo sensível ao tempo e aplicações baseadas em interação intensiva.
+### Static Site Generator (SSG)
+*   Geram conteúdo no momento da criação de novas páginas ou quando alterações são feitas no conteúdo
+*   Não ha´necessidade de carregar páginas com base em solicitações do usuário
+#### Vantagens
+*   Criação do conteúdo desaclopada do arquitetura
+*   Carregamento rápido
+*   Melhor para otimização de bysca (SEO)
+#### Desvantagens
+*   Dificuldade para aplicar conteúdos dinâmicos
+*   Mudança de conteúdo requer recriar o site
+#### Quando usar?
+*   Sites estáticos
+## Frameworks

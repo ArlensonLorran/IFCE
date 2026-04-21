@@ -90,3 +90,5 @@ conteúdo sensível ao tempo e aplicações baseadas em interação intensiva.
 #### Quando usar?
 *   Sites estáticos
 ## Frameworks
+### React
+#### Single Page Application

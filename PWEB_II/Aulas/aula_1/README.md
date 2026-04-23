@@ -83,7 +83,7 @@ conteúdo sensível ao tempo e aplicações baseadas em interação intensiva.
 #### Vantagens
 *   Criação do conteúdo desaclopada do arquitetura
 *   Carregamento rápido
-*   Melhor para otimização de bysca (SEO)
+*   Melhor para otimização de busca (SEO)
 #### Desvantagens
 *   Dificuldade para aplicar conteúdos dinâmicos
 *   Mudança de conteúdo requer recriar o site
@@ -93,19 +93,15 @@ conteúdo sensível ao tempo e aplicações baseadas em interação intensiva.
 ### React
 #### Single Page Application
 *   React é usado para criar uma aplicação que roda inteiramente no navegador do cliente após o carregamento inicial
-*   Funcionamento: O servidor envia um arquivo HTML praticamente vazio com uma div root. Todo conteúdo da interface é gerado e gerenciado no lado do cliente usando JS
-*   Ferramentas comuns: As ferramentas recomendadas são o Vite ou o modo "SPA" de framewoks mais completos, como o React Router
-*   Quando usar: Ideal para aplicações internas, dashboards administrativos ou qualquer outro projeto onde SEO não é um fator crítico e a experiência rica e interativa no cliente é prioridade
+*   Funcionamento: O servidor envia um arquivo HTML com uma div root. Todo conteúdo da interface é gerado e gerenciado no lado do cliente usando JS
+*   Ferramentas comuns: Vite ou o modo "SPA" de framewoks mais completos, como o React Router
+*   Quando usar: Aplicações internas, dashboards administrativos ou qualquer projeto onde SEO não é um fator crítico e a experiência rica e interativa no cliente é prioridade
 #### Server-Side Rendering
-*   Nessa arquitetura, o React é executado no servidor para gerar o HTML completo da página, que é enatão enviado ao cliente
-*   Funcionamento: O servidor (geralmente Node.js) usa funções como
-renderToString para transformar os componentes React em HTML
-*   Cada HTML é renderizado imediatamente no navegador, proporcionando
-uma sensação de carregamento mais rápido. Em seguida, o código JS do
-React é carregado e assume o controle no processo chamado de hidratação
-( hydration ), tornando a página interativa
-*   Ferramentas comuns: A implementação manual do SSR com React e Node.js é possível, mas complexs. Por isso, a própia documentação do React recomenda o uso de frameworks que já incorporam essa funcionalidade, como o Next.js ou o React Router
-*   Quando Usar: Essencial para sites de conteúdo, blogs, e-commerces e qualquer aplicação que dependa de um bom SEO e de um carregamento rápido da primeira página para uma melhor experiência do usuário
+*   React é executado no servidor para gerar o HTML completo da página, que é então enviado ao cliente
+*   Funcionamento: O servidor (geralmente Node.js) usa funções para transformar os componentes React em HTML
+*   Cada HTML é renderizado imediatamente no navegador. Em seguida, o código JS do React é carregado e assume o controle no processo chamado de hidratação(hydration), tornando a página interativa
+*   Ferramentas comuns: A implementação manual do SSR com React e Node.js é possível, mas complexa. A própia documentação do React recomenda o uso de frameworks que já incorporam essa funcionalidade, como o Next.js ou o React Router
+*   Quando Usar: Sites de conteúdo, blogs, e-commerces e qualquer aplicação que dependa de um SEO e de um carregamento rápido da primeira página para uma melhor experiência do usuário
 ### Abordagem Híbrida
 #### Framewoks Modernos
 *   Frameworks como Next.js e React Router (antigo Remix) são frequentemente chamados de "híbridos" porque combinam o melhor dos dois mundos

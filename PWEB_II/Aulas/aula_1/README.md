@@ -96,7 +96,7 @@ conteúdo sensível ao tempo e aplicações baseadas em interação intensiva.
 *   Funcionamento: O servidor envia um arquivo HTML com uma div root. Todo conteúdo da interface é gerado e gerenciado no lado do cliente usando JS
 *   Ferramentas comuns: Vite ou o modo "SPA" de framewoks mais completos, como o React Router
 *   Quando usar: Aplicações internas, dashboards administrativos ou qualquer projeto onde SEO não é um fator crítico e a experiência rica e interativa no cliente é prioridade
-#### Server-Side Rendering
+#### Server-Side Rendering 
 *   React é executado no servidor para gerar o HTML completo da página, que é então enviado ao cliente
 *   Funcionamento: O servidor (geralmente Node.js) usa funções para transformar os componentes React em HTML
 *   Cada HTML é renderizado imediatamente no navegador. Em seguida, o código JS do React é carregado e assume o controle no processo chamado de hidratação(hydration), tornando a página interativa

@@ -31,3 +31,21 @@ export default function TodoList() {
     / ???
   }
 ```
+## Criando o primeiro projeto
+### Checar node.js e npm
+```
+node --version
+npm --version
+```
+### Criar a estrutura (scaffolding)
+```
+npm vreate vite@latest
+```
+### Perguntas
+*   Project name -> Dar o nome do diretorio
+*   Frmaework a ser ultilizado
+*   Variante
+### Rodar a aplicação
+```
+npm run dev
+```
